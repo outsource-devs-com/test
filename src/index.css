@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.btn-effect {
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-effect:hover {
+  box-shadow: 0px 12px 15px -3px rgba(0, 0, 0, 0.4);
+  border-radius: 13px;
+}
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.input-error {
+  border-color: red;
+  animation: shake 0.5s ease;
+}
+
+.questions-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.1s ease;
+  /* Smooth transition for height */
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+  position: absolute;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.site-header {
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjk4IiBoZWlnaHQ9IjkzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgPGRlZnM+ICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMjguOTQlIiB5MT0iLTMwLjY4MyUiIHgyPSI2Ny40NzMlIiB5Mj0iMTM1LjAyMiUiIGlkPSJhIj4gICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNTY1Njc4IiBvZmZzZXQ9IjAlIi8+ICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzU2NTY3OCIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjEwMCUiLz4gICAgPC9saW5lYXJHcmFkaWVudD4gIDwvZGVmcz4gIDxwYXRoIGQ9Ik00MDMuMjQ0IDY5MGMyNC4yMDktNTQuNzc2IDc5LjAxOS05MyAxNDIuNzU2LTkzIDUzLjI1NSAwIDEyMy40NTggNTAuNjc0IDE5Ny4yMTUgOTNoLTMzOS45N3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MDMgLTU5NykiIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbC1vcGFjaXR5PSIuMjQiLz48L3N2Zz4=)
+}
+
+
+.background {
+  background-color: transparent;
+  /* background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjk4IiBoZWlnaHQ9IjkzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgPGRlZnM+ICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMjguOTQlIiB5MT0iLTMwLjY4MyUiIHgyPSI2Ny40NzMlIiB5Mj0iMTM1LjAyMiUiIGlkPSJhIj4gICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjNTY1Njc4IiBvZmZzZXQ9IjAlIi8+ICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzU2NTY3OCIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjEwMCUiLz4gICAgPC9saW5lYXJHcmFkaWVudD4gIDwvZGVmcz4gIDxwYXRoIGQ9Ik00MDMuMjQ0IDY5MGMyNC4yMDktNTQuNzc2IDc5LjAxOS05MyAxNDIuNzU2LTkzIDUzLjI1NSAwIDEyMy40NTggNTAuNjc0IDE5Ny4yMTUgOTNoLTMzOS45N3oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MDMgLTU5NykiIGZpbGw9InVybCgjYSkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbC1vcGFjaXR5PSIuMjQiLz48L3N2Zz4=) */
+}
+
+
+.recommend-label {
+  position: absolute;
+  top: 25px;
+  left: -34px;
+  width: 147px;
+  height: 30px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  transform: rotate(-45deg);
+  z-index: 10;
+  /* Ensures it stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 15px;
+}
+
+/* Text styling */
+.recommend-label p {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1024px) {
+  .recommend-label {
+    top: 15px;
+    /* Adjusting the position to fit smaller screens */
+    left: -24px;
+    /* Adjusting left positioning */
+    width: 110px;
+    /* Reducing width to be smaller */
+    height: 24px;
+    /* Reducing height */
+    font-size: 10px;
+    /* Smaller text */
+    line-height: 24px;
+    /* Adjust line height to match height */
+    background-color: rgba(255, 0, 0, 0.8);
+    /* Making the background slightly transparent */
+  }
+
+  .recommend-label p {
+    font-size: 9px;
+    /* Reduce font size for better visibility */
+  }
+}
+
+@media (max-width: 680px) {
+  .recommend-label {
+    top: 10px;
+    /* Further adjust the position for very small screens */
+    left: -18px;
+    /* Make sure it stays clear of card title */
+    width: 90px;
+    /* Narrower ribbon */
+    height: 20px;
+    /* Shorter ribbon */
+    font-size: 8px;
+    /* Smaller font size */
+    line-height: 20px;
+    /* Adjust line height */
+    background-color: rgba(255, 0, 0, 0.7);
+    /* Further lighten the background */
+  }
+
+  .recommend-label p {
+    font-size: 8px;
+    /* Very small font for tiny screens */
+  }
+}
+
+.dot-loader {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 10px;
+  /* Adjust width for spacing */
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  /* Size of the dots */
+  height: 8px;
+  /* Size of the dots */
+  border-radius: 50%;
+  background: #4A5568;
+  /* Color of the dots */
+  animation: dot-flashing 1.5s infinite linear;
+}
+
+.dot:nth-child(1) {
+  left: 0;
+  animation-delay: 0s;
+  /* No delay for the first dot */
+}
+
+.dot:nth-child(2) {
+  left: 10px;
+  /* Adjust spacing between dots */
+  animation-delay: 0.3s;
+  /* Delay for the second dot */
+}
+
+.dot:nth-child(3) {
+  left: 20px;
+  /* Adjust spacing between dots */
+  animation-delay: 0.6s;
+  /* Delay for the third dot */
+}
+
+@keyframes dot-flashing {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
